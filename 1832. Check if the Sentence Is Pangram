@@ -1,0 +1,22 @@
+class Solution {
+    public boolean checkIfPangram(String sentence) {
+        for(char i='a';i<='z';i++){
+            if(sentence.indexOf(i)<0){
+                return false;
+            }
+        }
+        return true;
+    }
+}
+//using set-------------------------------------------------->
+#include<set>
+class Solution {
+public:
+    bool checkIfPangram(string sentence) {
+        set<int>s;
+        for(auto &ch: sentence){
+            s.insert(ch);
+        }
+        return s.size()==26;
+    }
+};
