@@ -1,0 +1,26 @@
+class Solution {
+public:
+    int matrixSum(vector<vector<int>>& nums) {
+           int row= nums.size();
+           int col= nums[0].size();
+           int score=0;
+           for(int i=0;i<row;i++){
+            sort(nums[i].begin(),nums[i].end());
+
+           }
+for(int i=col-1;i>=0;i--){
+       int maxcol=0;// iterate each column..last index...
+for(int j=0;j<row;j++){
+ 
+    maxcol= max(maxcol,nums[j][i]);
+
+}
+score+=maxcol;
+
+
+}
+return score;
+
+
+    }
+};
